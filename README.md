@@ -1,5 +1,6 @@
 # Remote Code Execution Educational Project
 ⚠️ **ADVERTENCIA CRÍTICA: PROYECTO SOLO PARA FINES EDUCATIVOS**
+
 ⚠️🚨 **NO EJECUTAR EL EXE DE PRUEBA (chocolate.exe)**⚠️🚨
 ---
 
