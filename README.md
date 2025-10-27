@@ -45,6 +45,14 @@ chocolate.exe
 pyinstaller --onefile .\chocolate.py
 ```
 
+### Descarga del .exe
+
+Para facilitar la descarga del archivo se creó una pagina llamada descarga.html que tiene un botón para descargar el archivo chocolate.exe
+
+la pagina también está hosteada en clouflare
+
+https://chocolate.jorpavelazc-93f.workers.dev/descarga
+
 ---
 
 ### Shell PowerShell (`shell.ps1`)
