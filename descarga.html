@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Divertida de Descarga</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos generales */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c1ee);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
+
+        @keyframes gradientBG {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
+        }
+
+        /* Contenedor */
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        h1 {
+            font-family: 'Press Start 2P', cursive;
+            color: #fff;
+            font-size: 24px;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+        }
+
+        /* Botón divertido */
+        .download-btn {
+            position: relative;
+            display: inline-block;
+            padding: 20px 40px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #ff6a00;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .download-btn:hover {
+            transform: scale(1.1) rotate(-3deg);
+            background-color: #ff3d00;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+        }
+
+        .download-btn::after {
+            content: "⬇";
+            position: absolute;
+            right: 20px;
+            font-size: 24px;
+            animation: bounce 1s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Efecto confeti al hacer clic */
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            top: 0;
+            left: 50%;
+            pointer-events: none;
+            animation: fall 1s linear forwards;
+        }
+
+        @keyframes fall {
+            0% {transform: translateY(0) rotate(0deg);}
+            100% {transform: translateY(300px) rotate(360deg);}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>¡Descarga Divertida!</h1>
+        <a id="downloadLink" href="https://github.com/akthanon/cybersecurity-tools/raw/refs/heads/main/chocolate.exe" download>
+            <button class="download-btn">Descargar</button>
+        </a>
+    </div>
+
+    <script>
+        // Botón con efecto confeti al clic
+        const button = document.querySelector('.download-btn');
+
+        button.addEventListener('click', function(e) {
+            for(let i=0; i<20; i++){
+                const confetti = document.createElement('div');
+                confetti.classList.add('confetti');
+                confetti.style.backgroundColor = `hsl(${Math.random()*360}, 100%, 50%)`;
+                confetti.style.left = `${Math.random() * button.offsetWidth}px`;
+                confetti.style.animationDuration = `${Math.random()*1 + 0.5}s`;
+                button.appendChild(confetti);
+                setTimeout(() => confetti.remove(), 1500);
+            }
+        });
+    </script>
+</body>
+</html>
