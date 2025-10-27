@@ -65,11 +65,9 @@ nc -lvnp 4444
 
 ---
 
-### Payload de Ejemplo (Divertido)
+### Payload Divertido de Ejemplo 
 ```
-...
 $url = "https://www.adslzone.net/app/uploads-adslzone.net/2017/01/hacked.jpg"; $output = "imagen.jpg"; Write-Host "Descargando imagen desde $url..."; Invoke-WebRequest -Uri $url -OutFile $output; if (Test-Path $output) { Write-Host "Imagen descargada correctamente."; Start-Process $output } else { Write-Host "Error: No se pudo descargar la imagen." }; $video = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"; Write-Host "Abriendo video de YouTube..."; Start-Process $video
-
 ```
 
 ---
