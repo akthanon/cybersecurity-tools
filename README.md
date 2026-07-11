@@ -123,7 +123,10 @@ comando.py
 
 Este proyecto tiene fines **educativos** y está diseñado para comprender conceptos básicos de comunicación cliente-servidor, ejecución remota de comandos mediante HTTP y arquitectura de un sistema simple de control remoto en entornos de laboratorio autorizados.
 
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/04ada3cf-2ab8-4ac2-8ca0-70ae52e347f2" />
+
 ---
+
 
 ## 🔒 Advertencias de Seguridad
 
