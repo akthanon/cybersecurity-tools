@@ -7,8 +7,6 @@
 ## Descripción del Proyecto
 Este repositorio contiene código educativo diseñado exclusivamente para comprender el funcionamiento de los RAT (Remote Administration Tools) y técnicas de ejecución remota de código. El objetivo es proporcionar material de estudio para profesionales de ciberseguridad, investigadores y estudiantes en entornos controlados.
 
-## Nuevos añadidos cliente.py comando.py y servidor.py se han añadido como un extra
-Se cambió el chocolate.exe por la compilacion del cliente.py
 
 🚨 **USO RESPONSABLE REQUERIDO**
 
@@ -81,6 +79,49 @@ nc -lvnp 4444
 ```
 $url = "https://www.adslzone.net/app/uploads-adslzone.net/2017/01/hacked.jpg"; $output = "imagen.jpg"; Write-Host "Descargando imagen desde $url..."; Invoke-WebRequest -Uri $url -OutFile $output; if (Test-Path $output) { Write-Host "Imagen descargada correctamente."; Start-Process $output } else { Write-Host "Error: No se pudo descargar la imagen." }; $video = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"; Write-Host "Abriendo video de YouTube..."; Start-Process $video
 ```
+## Nuevos añadidos cliente.py comando.py y servidor.py se han añadido como un extra
+Se cambió el chocolate.exe por la compilacion del cliente.py
+# HTTP WebShell (PoC)
+
+Una **WebShell por HTTP** escrita en Python como prueba de concepto (PoC) para comprender cómo un cliente remoto puede recibir comandos desde un servidor web, ejecutarlos y devolver la salida utilizando peticiones HTTP.
+
+## Componentes
+
+* **cliente.py**: Agente que consulta periódicamente al servidor, ejecuta comandos y envía la salida.
+* **servidor.py**: Servidor HTTP sencillo que actúa como intermediario entre el operador y el cliente.
+* **comando.py**: Consola interactiva para enviar comandos y visualizar los resultados.
+
+## Flujo
+
+```text
+comando.py
+      │
+ POST /send
+      │
+      ▼
+servidor.py
+      │
+ GET /messages
+      │
+      ▼
+cliente.py
+      │
+ Ejecuta comando
+      │
+ POST /shell
+      │
+      ▼
+servidor.py
+      │
+GET /shell_messages
+      │
+      ▼
+comando.py
+```
+
+## Objetivo
+
+Este proyecto tiene fines **educativos** y está diseñado para comprender conceptos básicos de comunicación cliente-servidor, ejecución remota de comandos mediante HTTP y arquitectura de un sistema simple de control remoto en entornos de laboratorio autorizados.
 
 ---
 
