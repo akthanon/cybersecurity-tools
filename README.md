@@ -7,6 +7,9 @@
 ## Descripción del Proyecto
 Este repositorio contiene código educativo diseñado exclusivamente para comprender el funcionamiento de los RAT (Remote Administration Tools) y técnicas de ejecución remota de código. El objetivo es proporcionar material de estudio para profesionales de ciberseguridad, investigadores y estudiantes en entornos controlados.
 
+## Nuevos añadidos cliente.py comando.py y servidor.py se han añadido como un extra
+Se cambió el chocolate.exe por la compilacion del cliente.py
+
 🚨 **USO RESPONSABLE REQUERIDO**
 
 - Solo ejecutar en laboratorios aislados  
